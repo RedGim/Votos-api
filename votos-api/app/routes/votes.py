@@ -62,7 +62,7 @@ def statistics(db: Session = Depends(get_db)):
     names = []
     votes = []
 
- for c in candidates:
+    for c in candidates:
         names.append(c.name)
         votes.append(c.votes)
 
@@ -89,4 +89,5 @@ def statistics(db: Session = Depends(get_db)):
     plt.savefig("votes_chart.png")
 
     return data
+
 
